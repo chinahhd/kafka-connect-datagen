@@ -25,6 +25,9 @@ ENV CONNECT_PLUGIN_PATH="/usr/share/java,/usr/share/confluent-hub-components"
 
 RUN confluent-hub install --no-prompt confluentinc/kafka-connect-datagen:latest
 
+# 解决时区问题
+ENV TZ "Asia/Shanghai"
+
 # 终端设置
 ENV TERM xterm
 
